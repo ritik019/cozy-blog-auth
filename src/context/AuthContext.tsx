@@ -63,11 +63,18 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
       const { password, ...userWithoutPassword } = foundUser;
       setUser(userWithoutPassword);
       localStorage.setItem('blogUser', JSON.stringify(userWithoutPassword));
-      toast.success("Welcome back!");
+      toast({
+        title: "Success",
+        description: "Welcome back!"
+      });
       setIsLoading(false);
       return true;
     } else {
-      toast.error("Invalid email or password");
+      toast({
+        title: "Error",
+        description: "Invalid email or password",
+        variant: "destructive"
+      });
       setIsLoading(false);
       return false;
     }
@@ -81,7 +88,11 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
     
     // Check if email already exists in MOCK_USERS
     if (MOCK_USERS.some(u => u.email === email)) {
-      toast.error("Email already in use");
+      toast({
+        title: "Error",
+        description: "Email already in use",
+        variant: "destructive"
+      });
       setIsLoading(false);
       return false;
     }
@@ -98,7 +109,10 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
     setUser(userWithoutPassword);
     localStorage.setItem('blogUser', JSON.stringify(userWithoutPassword));
     
-    toast.success("Account created successfully!");
+    toast({
+      title: "Success",
+      description: "Account created successfully!"
+    });
     setIsLoading(false);
     return true;
   };
@@ -106,7 +120,10 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
   const signOut = () => {
     setUser(null);
     localStorage.removeItem('blogUser');
-    toast.info("You've been signed out");
+    toast({
+      title: "Info",
+      description: "You've been signed out"
+    });
   };
 
   return (
