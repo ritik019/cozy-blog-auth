@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { BlogCard } from '@/components/BlogCard';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
@@ -93,7 +92,7 @@ const allPosts = [
   {
     id: '9',
     title: 'Kubernetes for Application Developers',
-    excerpt: 'A guide to understanding Kubernetes concepts and workflows from an application developer's perspective.',
+    excerpt: 'A guide to understanding Kubernetes concepts and workflows from an application developer\'s perspective.',
     date: 'April 30, 2023',
     category: 'DevOps and Infrastructure',
     subcategory: 'Kubernetes',

@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { FeaturedPost } from '@/components/FeaturedPost';
 import { BlogCard } from '@/components/BlogCard';
@@ -36,7 +35,7 @@ const trendingPosts = [
   },
   {
     id: '4',
-    title: 'Building Accessible Interfaces: A Developer's Guide',
+    title: 'Building Accessible Interfaces: A Developer\'s Guide',
     excerpt: 'A deep dive into web accessibility standards and practical implementation strategies to create inclusive digital experiences for all users.',
     date: 'April 29, 2023',
     category: 'Accessibility',
